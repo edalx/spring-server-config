@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: gateway
+
+server:
+  port: 8000
+
+zuul:
+  ignoredServices: '*'
+  prefix: /api
+  routes:
+    artistas:
+      path: /singer/**
+      serviceId: artistas
+      strip-prefix: false
+    albums: 
+      path: /album/**
+      serviceId: artistas
+      strip-prefix: false
+    instrumentos:
+      path: /instrument/**
+      serviceId: instrumentos
+      strip-prefix: false
+      
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+endpoints:
+  trace:
+    sensitive: false
