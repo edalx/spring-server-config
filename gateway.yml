@@ -25,8 +25,7 @@ zuul:
 eureka:
   client:
     service-url:
-      #default-zone: http://registro:8761/eureka/
-      default-zone: http://localhost:8761/eureka/
+      default-zone: http://registro:8761/eureka/
 
 endpoints:
   trace:
