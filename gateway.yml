@@ -24,6 +24,7 @@ zuul:
       
 eureka:
   client:
+    registerWithEureka: true
     service-url:
       default-zone: http://registro:8761/eureka/
 
